@@ -90,7 +90,7 @@ const plusSlides = function (n) {
     showSlides((slideIndex += n));
 };
 
-constcurrentSlide = function (n) {
+const currentSlide = function (n) {
     showSlides((slideIndex = n));
 };
 
