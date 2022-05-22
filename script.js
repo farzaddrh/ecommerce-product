@@ -81,7 +81,8 @@ const showSlides = function (n) {
 };
 largeImage.addEventListener("click", function () {
     toglleHiddenClass(overlay);
-    toglleHiddenClass(slider);
+    // toglleHiddenClass(slider);
+    slider.classList.remove("hidden");
     slideIndex = +this.src.split("-")[2][0];
     showSlides(slideIndex);
 });
