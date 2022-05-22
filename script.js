@@ -105,7 +105,7 @@ btnPrevious.addEventListener("click", function () {
 
 smallImgContainerSlider.forEach((cont, i) => {
     cont.addEventListener("click", function () {
-        constcurrentSlide(i + 1);
+        currentSlide(i + 1);
     });
 });
 /////////////////// detemrmine the number of the product////////////////
