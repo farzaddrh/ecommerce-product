@@ -76,8 +76,9 @@ const showSlides = function (n) {
         ].className.replace(" active", "");
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    smallImgContainerSlider[slideIndex - 1].className += " active";
+    const s = slideIndex - 1;
+    slides[s].style.display = "block";
+    smallImgContainerSlider[s].className += " active";
 };
 largeImage.addEventListener("click", function () {
     toglleHiddenClass(overlay);
