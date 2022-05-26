@@ -16,7 +16,6 @@ const productNum = document.getElementById("product-num");
 const btnAddToCart = document.querySelector(".btn-add");
 const numberOfProduct = document.querySelector(".product-number");
 const cartBody = document.querySelector(".cart-body");
-const profileImage = document.querySelector(".avatar");
 const cart = document.querySelector(".cart");
 const empty = document.querySelector(".empty");
 const sneakerInfor = document.querySelector(".sneaker-info");
@@ -26,6 +25,7 @@ const btnDelete = document.querySelector(".delete");
 const btnCheckout = document.querySelector(".btn-checkout");
 const btnNav = document.querySelector(".btn-mobile-nav");
 const headerContainer = document.querySelector(".container-header");
+const basket = document.querySelector(".basket-icon-container");
 let slideIndex = 1;
 
 smallImgContainer.forEach((container) => {
@@ -135,12 +135,10 @@ btnAddToCart.addEventListener("click", function () {
     }
 });
 
-profileImage.addEventListener("mouseenter", function (e) {
-    console.log("ddddddddddddd");
-    console.log(e);
+basket.addEventListener("mouseenter", function (e) {
     cart.classList.remove("hidden");
 });
-profileImage.addEventListener("mouseleave", function () {
+basket.addEventListener("mouseleave", function () {
     if (productNum.value == 0) cart.classList.add("hidden");
 });
 

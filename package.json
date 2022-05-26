@@ -9,11 +9,8 @@
     },
     "author": "Farzad",
     "license": "ISC",
-    "dependencies": {
-        "sass": "^1.51.0"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "@parcel/transformer-sass": "^2.5.0",
-        "parcel": "^2.5.0"
+        "@parcel/transformer-sass": "^2.6.0"
     }
 }
