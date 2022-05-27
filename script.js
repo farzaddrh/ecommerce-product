@@ -26,6 +26,8 @@ const btnCheckout = document.querySelector(".btn-checkout");
 const btnNav = document.querySelector(".btn-mobile-nav");
 const headerContainer = document.querySelector(".container-header");
 const basket = document.querySelector(".basket-icon-container");
+const btnNextMobile = document.querySelector(".next-mobile");
+const btnPreviousMobile = document.querySelector(".previous-mobile");
 let slideIndex = 1;
 
 smallImgContainer.forEach((container) => {
@@ -60,6 +62,7 @@ const showSlides = function (n) {
     let i;
 
     const slides = document.querySelectorAll(".img-large-slider-container");
+    const slidesMobile = document.querySelectorAll(".slide-mobile");
 
     if (n > slides.length) {
         slideIndex = 1;
@@ -67,8 +70,18 @@ const showSlides = function (n) {
     if (n < 1) {
         slideIndex = slides.length;
     }
+    if (n > slidesMobile.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slidesMobile = slidesMobile.length;
+    }
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+    }
+    for (i = 0; i < slidesMobile.length; i++) {
+        slidesMobile[i].style.display = "none";
     }
     for (i = 0; i < smallImgContainerSlider.length; i++) {
         smallImgContainerSlider[i].className = smallImgContainerSlider[
@@ -78,6 +91,7 @@ const showSlides = function (n) {
 
     const s = slideIndex - 1;
     slides[s].style.display = "block";
+    slidesMobile[s].style.display = "block";
     smallImgContainerSlider[s].className += " active";
 };
 largeImage.addEventListener("click", function () {
@@ -100,6 +114,12 @@ btnNext.addEventListener("click", function () {
     plusSlides(1);
 });
 btnPrevious.addEventListener("click", function () {
+    plusSlides(-1);
+});
+btnNextMobile.addEventListener("click", function () {
+    plusSlides(1);
+});
+btnPreviousMobile.addEventListener("click", function () {
     plusSlides(-1);
 });
 
